@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="styles"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+  <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/al/l.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Header-->
+  <header data-aos-duration="1000" data-aos-delay="400" data-aos="fade-down">
+    <div id="logo">
+      <img class="  " src="images/logo.png" alt="" />
+      <!-- <p>Tech Dominion</p> -->
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><a class="nav-link pointer" href="index.html">Home</a></li>
+        <li>
+          <a class="nav-link pointer" href="pricing.html">Pricing & Plans</a>
+        </li>
+        <li>
+          <a class="nav-link pointer" href="community.html">Join Community</a>
+        </li>
+        <li><a class="nav-link pointer" href="blog.html">Check Updates & Blog</a></li>
+      </ul>
+    </nav>
+    <div class="search-form pointer">
+      <input type="text" style="width: 80%;" id="search" placeholder="Search blog" />
+      &nbsp;<button class="pointer">
+        <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png"
+          style="width: 20px !important; height: 20px !important;" alt="" title="">&nbsp;
+      </button>
+    </div>
+    <div class="login-signup">
+      <a href="login.html" type="button" class="sign-in pointer">Sign in</a>
+      <a href="signup.html" type="button" class="register pointer">Register</a>
+    </div>
+    <div class="hamburger-icon pointer" id="icon">
+      <div class="icon-1"></div>
+      <div class="icon-2"></div>
+      <div class="icon-3"></div>
+      <div class="clear"></div>
+    </div>
+
+    <nav class="animate__animated animate__slideOutUp nav circleBehind" id="nav">
+      <ul>
+        <div class="search-form" style="
+              margin-left: 5px;
+              margin-bottom: 10px;
+              margin-top: 10px;
+              margin-right: 20px;
+            ">
+          <input type="text" style="width: 80%;" id="search" placeholder="Search blog" />
+          &nbsp;<button class="pointer">
+            <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png"
+              style="width: 20px !important; height: 20px !important;" alt="" title="">&nbsp;
+          </button>
+        </div>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="pricing.html">Pricing & Plans</a></li>
+        <li><a class="nav-link" href="community.html">Join Community</a></li>
+        <li><a class="nav-link" href="blog.html">Check Updates & Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- /Header -->
+
+  <!-- hero section -->
+  <section data-tilt-glare data-tilt-max-glare="0.8" class="hero-section" id="parallax">
+    <div class="hero-sectionContainer">
+      <div class="text-box">
+        <p style="text-align: center;">Welcome to</p>
+        <h1 style="text-align: center;">Tech Dominion</h1>
+        <h3 style="text-align: center;">Our focus to empower students of IT in Pakistan.</h3>
+        <div class="row" style="display: flex; width: 100%; align-items: center; justify-content: center">
+          <a class="pointer" href="" style="text-align: center;" class="hover-buttons">Join Our Community</a>
+          <a class="pointer" href="" style="text-align: center;" class="hover-buttons">Check Testimonials</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /hero section -->
+
+  <!-- introduction-section -->
+  <div class="intro-section" data-aos="zoom-in-up">
+    <div class="content" data-aos-delay="50" data-aos="zoom-in" data-aos-duration="2000">
+      <!-- Main Heading -->
+      <h1 data-aos="fade-up" data-aos-duration="1000">Empower</h1>
+      <!-- Subheading -->
+      <h2 data-aos="fade-up" data-aos-duration="2000">
+        Unlock Your Potential with Tech Dominion
+      </h2>
+      <!-- Description -->
+      <p class="description" data-aos="zoom-in-right" data-aos-delay="100" data-aos-duration="1000">
+        Tech Dominion offers Pakistani web developers comprehensive courses,
+        study materials, live lectures, 1-on-1 sessions, challenges, industry
+        updates, and a supportive community for continuous learning and
+        professional growth. With our 1-on-1 sessions, you'll receive
+        personalized guidance from industry experts. Our challenges will test
+        your skills and push you to new heights. Stay up to date with the
+        latest industry updates and trends to stay ahead of the competition.
+        Join our supportive community of like-minded developers and unlock
+        your full potential. Sign up today and start your journey with Tech
+        Dominion.
+      </p>
+      <!-- Features Grid -->
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-delay="50">
+          <img src="images/stay-ahead.png" alt="Stay Ahead" />
+          <p>Stay Ahead with Tech Dominion</p>
+          <span>1-on-1 Sessions with Industry Experts</span>
+        </div>
+
+        <!-- Main Image -->
+        <div class="feature main-image" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="200">
+          <img src="images/main-image.png" alt="Tech Dominion" />
+        </div>
+        <!-- Feature 2 -->
+
+        <div class="feature" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="50">
+          <img src="images/join-community.png" alt="Join Our Community" />
+          <p>Join Our Community</p>
+          <span>Unlock Your Full Potential with Tech Dominion</span>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-delay="50">
+          <img src="images/challenges.png" alt="Challenges" />
+          <p>Challenges to Push You</p>
+          <span>Stay Up to Date with Industry Updates</span>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="50">
+          <img src="images/start-journey.png" alt="Start Your Journey" />
+          <p>Start Your Journey Today</p>
+          <span>Continuous Learning for Professional Growth</span>
+        </div>
+      </div>
+      <!-- Buttons -->
+      <!-- <div class="buttons">
+        <button onclick="learnMore()">Learn More</button>
+        <button onclick="signUp()">Sign Up</button>
+      </div> -->
+    </div>
+    <!-- /introduction-section -->
+  </div>
+  <!-- / introduction-section -->
+
+  <!-- articles section -->
+  <section class="articles-section" data-aos="flip-up" data-aos-duration="2000">
+    <div class="articles-content">
+      <h5>Blog Articles</h5>
+      <h5>Discover the latest Insights</h5>
+      <p>Stay informed with our Informative blog posts</p>
+      <div class="blogs">
+       <img class="blog1" src="images/fiveg.png" alt="">
+        <img class="blog2" src="images/network.png" alt="">
+        <img class="blog3" src="images/pc.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- /articles section -->
+  <!-- basic section -->
+  <section class="basic-section" data-aos="flip-down" data-aos-duration="2000">
+    <div class="basic-textbox">
+      <h3>Unlock Your Potential Today</h3>
+      <p>
+        Join our community of web developers and gain access to comprehensive
+        courses, study materials, live lectures, 1-on-1 sessions, challenges,
+        industry updates, and more.
+      </p>
+    </div>
+  </section>
+  <!-- /basic section -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- Section: Social media -->
+    <section class="footer-social">
+      <!-- Left -->
+      <div class="footer-social-left">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Right -->
+      <div class="footer-social-right">
+        <a href="#" class="social-icon">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-facebook">
+            <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3.5l.5-4H13V8a2 2 0 0 1 2-2h3z" />
+          </svg>
+
+        </a>
+        <a href="#" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-twitter">
+            <path
+              d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+          </svg>
+
+        </a>
+        <a href="#" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-instagram">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8a4 4 0 0 1 3.37 3.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+
+        </a>
+        <a href="#" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin"
+            viewBox="0 0 16 16">
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+          </svg>
+
+
+
+        </a>
+        <a href="#" class="social-icon">
+          <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16"
+            width="24">
+            <path fill="#fff" fill-rule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+            </path>
+          </svg>
+
+
+        </a>
+      </div>
+    </section>
+    <!-- Section: Links -->
+    <section class="footer-links">
+      <div class="footer-container">
+        <!-- Grid row -->
+        <div class="footer-row">
+          <!-- Grid column -->
+          <div class="footer-column footer-about">
+            <h6 class="footer-title">
+              Tech Dominion
+            </h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
+              nihil.
+            </p>
+          </div>
+          <!-- Grid column -->
+          <div class="footer-column footer-products">
+            <h6 class="footer-title">Company</h6>
+            <p>
+              <a class="pointer footer-link" href="aboutus.html">About Us</a>
+            </p>
+            <p>
+              <a class="pointer footer-link" href="privacy.pdf">Privacy & Policy</a>
+            </p>
+            <p><a class="pointer footer-link" href="faq.html">FAQs</a></p>
+            <p>
+              <a class="pointer footer-link" href="contact.html">Support</a>
+            </p>
+
+            <!-- <p><a class="pointer" href="#">Pricing & Refunds</a></p> -->
+          </div>
+          <!-- Grid column -->
+          <div class="footer-column footer-contact">
+            <h6 class="footer-title">Contact</h6>
+            <p> Street 44, Saddar, Karachi</p>
+            <p> info@example.com</p>
+            <p> +92 111 222 333</p>
+            <p> +92 111 222 333</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      © 2021 Copyright:
+      <a href="footer.html" class="footer-link">Tech Dominion.com</a>
+    </div>
+  </footer>
+  <!-- Footer -->
+</body>
+
+</html>
+<script src="js/script.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+
+<!-- vanilla tilt js -->
+<script>
+  VanillaTilt.init(document.querySelector(".hero-section"), {
+    max: 5,
+    speed: 1000,
+    scale: 1.06,
+    transition: true,
+    reset: true,
+    perspective: 1500,
+    "max-glare": 0.01,
+
+    gyroscope: true,
+    easing: "cubic-bezier(.03,.98,.52,.99)",
+  });
+</script>
+<!-- /vanilla tilt js -->
+
+<!-- aos.js  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+<!-- aos.js -->
+
+<!-- jqeury smooth scroll -->
+<!-- <script>
+  $(document).ready(function () {
+    scrollBar();
+    $(window).on("scroll", function () {
+      scrollBar();
+    });
+  });
+
+  //SMOOTH SCROLL
+  $("header a").click(function () {
+    var $href = $(this).attr("href").replace("/", "");
+    var $anchor = $($href).offset();
+
+    if (typeof $anchor !== "undefined") {
+      $("html, body").animate({
+        scrollTop: $anchor.top,
+      });
+      return false;
+    }
+  });
+</script> -->
+
+<script>
+  $(document).ready(function () {
+    // Add smooth scrolling to all links
+    $("a").on("click", function (event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          100000000,
+          "easeInOutExpo",
+          function () {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          }
+        );
+      } // End if
+    });
+  });
+</script>
+<!-- /jqeury smooth scroll -->

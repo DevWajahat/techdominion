@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
+  </head>
+  <body>
+    <div class="form">
+      <h2>Signup</h2>
+      <div class="input">
+        <div class="inputBox pointer">
+          <label class="pointer" for="firstname">Firstname</label>
+          <input
+            class="pointer"
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="John"
+          />
+          <span class="error pointer" id="firstnameError"></span>
+        </div>
+        <div class="inputBox pointer">
+          <label class="pointer" for="lastname">Lastname</label>
+          <input
+            class="pointer"
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Doe"
+          />
+          <span class="error pointer" id="lastnameError"></span>
+        </div>
+        <div class="inputBox pointer">
+          <label class="pointer" for="username">Username</label>
+          <input
+            class="pointer"
+            type="text"
+            name="username"
+            id="username"
+            placeholder="JohnDoe45"
+          />
+          <span class="pointer error" id="usernameError"></span>
+        </div>
+        <div class="inputBox pointer">
+          <label class="pointer" for="email">Email</label>
+          <input
+            class="pointer"
+            type="text"
+            name="email"
+            id="email"
+            placeholder="example@xyz.com"
+          />
+          <span class="error" id="emailError"></span>
+        </div>
+        <div class="inputBox pointer">
+          <label class="pointer" for="password">Password</label>
+          <input
+            class="pointer"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="•••••••••"
+          />
+          <span class="error pointer" id="passwordError"></span>
+        </div>
+        <div class="inputBox pointer">
+          <input type="submit" name="signup" id="signup" value="Sign up" />
+        </div>
+      </div>
+      <p class="forget pointer">
+        Already have an Account? <a href="login.html">Log In</a>
+      </p>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputs = document.querySelectorAll(".inputBox input");
+        inputs.forEach((input) => {
+          input.addEventListener("focus", function () {
+            this.parentNode.classList.add("focus");
+          });
+          input.addEventListener("blur", function () {
+            if (this.value === "") {
+              this.parentNode.classList.remove("focus");
+            }
+          });
+        });
+
+        document
+          .getElementById("signup")
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+            validateForm();
+          });
+
+        function validateForm() {
+          const firstname = document.getElementById("firstname").value.trim();
+          const lastname = document.getElementById("lastname").value.trim();
+          const username = document.getElementById("username").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value.trim();
+
+          const firstnameError = document.getElementById("firstnameError");
+          const lastnameError = document.getElementById("lastnameError");
+          const usernameError = document.getElementById("usernameError");
+          const emailError = document.getElementById("emailError");
+          const passwordError = document.getElementById("passwordError");
+
+          let isValid = true;
+
+          firstnameError.textContent = "";
+          lastnameError.textContent = "";
+          usernameError.textContent = "";
+          emailError.textContent = "";
+          passwordError.textContent = "";
+
+          if (!firstname) {
+            firstnameError.textContent = "Firstname is required";
+            isValid = false;
+          }
+
+          if (!lastname) {
+            lastnameError.textContent = "Lastname is required";
+            isValid = false;
+          }
+
+          if (!username) {
+            usernameError.textContent = "Username is required";
+            isValid = false;
+          }
+
+          if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+            emailError.textContent = "Valid email is required";
+            isValid = false;
+          }
+
+          if (!password || password.length < 8) {
+            passwordError.textContent =
+              "Password must be at least 8 characters long";
+            isValid = false;
+          }
+
+          if (isValid) {
+            const user = { firstname, lastname, username, email, password };
+            saveToJSON(user);
+            window.location.href = "login.html";
+          }
+        }
+
+        function saveToJSON(user) {
+          let users = JSON.parse(localStorage.getItem("users")) || [];
+          users.push(user);
+          localStorage.setItem("users", JSON.stringify(users));
+        }
+      });
+    </script>
+  </body>
+</html>

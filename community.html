@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <style>
+      body {
+        transition: 4s ease;
+        background: linear-gradient(
+          135deg,
+          rgb(17, 70, 100),
+          rgba(0, 145, 255, 0.254) 10%,
+          rgba(7, 11, 134, 0.106) 20%,
+          rgb(7, 12, 93) 88%,
+          rgb(17, 130, 216) 99%,
+          rgb(3, 129, 207) 100%
+        );
+        background-size: 300% 300%;
+        background-repeat: no-repeat;
+        animation: gradientAnimation 3.4s ease-in-out infinite;
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 0%;
+        }
+        25% {
+          background-position: 25% 25%;
+        }
+        50% {
+          background-position: 100% 100%;
+        }
+        100% {
+          background-position: 0% 0%;
+        }
+      }
+
+      .community-section {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        color: #fff;
+      }
+      @media (max-width:375px) {
+        .glass-container h1{
+        font-size: 43px !important;
+      }
+      }
+      .glass-container {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .community-section h1 {
+        font-weight: 900;
+        font-size: 48px;
+        margin-bottom: 40px;
+      }
+
+      .card {
+        background: #f0f0f3;
+        border-radius: 16px;
+        box-shadow: 9px 9px 12px #d1d1d87c, -9px -9px 12px #ffffff5b;
+        border: none;
+        color: #333;
+        transition: all 0.3s ease;
+        height: auto;
+        overflow: hidden;
+      }
+
+      .card:hover {
+        box-shadow: 4px 4px 8px #d1d1d8, -4px -4px 8px #ffffffa1;
+        transform: translateY(-10px) !important;
+      }
+
+      .card img {
+        border-radius: 16px 16px 0 0;
+        height: 235px;
+        object-fit: cover;
+      }
+
+      .card .btn-primary {
+        background-color: #007bff;
+        border: none;
+        cursor: url("images/pointer.png"), auto !important;
+        transition: background-color 0.3s, transform 0.3s;
+        box-shadow: 4px 4px 8px #d1d1d8, -4px -4px 8px #ffffff;
+      }
+
+      .card .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+      }
+
+      .card .card-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+
+      .card .card-text {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header-->
+    <header data-aos-duration="1000" data-aos-delay="400" data-aos="fade-down">
+      <div id="logo">
+        <img class="  " src="images/logo.png" alt="" />
+        <!-- <p>Tech Dominion</p> -->
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a class="mt-3 nav-link pointer" href="index.html">Home</a></li>
+          <li>
+            <a class="mt-3 nav-link pointer" href="pricing.html">Pricing & Plans</a>
+          </li>
+          <li><a class="mt-3 nav-link pointer" href="community.html">Join Community</a></li>
+          <li>
+            <a class="mt-3 nav-link pointer" href="blog.html">Check Updates & Blog</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="search-form pointer">
+        <input
+          type="text"
+          name=""
+          class="pointer"
+          id="search"
+          placeholder="Search blog"/>
+        &nbsp;<button class="pointer">
+          <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" style="width: 20px !important; height: 20px !important;" alt="" title=""  >
+      </button></div>
+      <div class="login-signup">
+        <a href="login.html" type="button" class="sign-in pointer">Sign in</a>
+        <a href="signup.html" type="button" class="register pointer">Register</a>
+      </div>
+      <div class="hamburger-icon pointer" id="icon">
+        <div class="icon-1"></div>
+        <div class="icon-2"></div>
+        <div class="icon-3"></div>
+        <div class="clear"></div>
+      </div>
+
+      <nav
+        class="animate__animated animate__slideOutUp nav circleBehind"
+        id="nav">
+        <ul>
+          <div
+            class="search-form"
+            style="
+              margin-left: 5px;
+              margin-bottom: 10px;
+              margin-top: 10px;
+              margin-right: 300px;
+            "
+          >
+          <input style="width: 80%;" type="text" name="" id="search" placeholder="Search blog" />
+          &nbsp;<button class="pointer">
+            <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" style="width: 20px !important; height: 20px !important;" alt="" title=""  >&nbsp;
+        </button></div>
+          <li><a class="nav-link" href="index.html">Home </a></li>
+          <li><a class="nav-link" href="pricing.html">Pricing & Plans </a></li>
+          <li><a class="nav-link" href="community.html">Join Community </a></li>
+          <li><a class="nav-link" href="blog.html">Check Updates & Blog </a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- /Header -->
+
+    <!-- community section -->
+    <div class="community-section">
+      <div class="glass-container">
+        <h1>COMMUNITY</h1>
+        <div class="row mt-5 justify-content-center">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card community-card">
+              <img
+                src="https://media.istockphoto.com/id/1371339413/photo/co-working-team-meeting-concept-businessman-using-smart-phone-and-digital-tablet-and-laptop.jpg?b=1&s=612x612&w=0&k=20&c=5f5qgmdm1_isNCz_ISP61-2QPfEtRl0Fz1ZVplTD7ek="
+                class="card-img-top"
+                alt="Community Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Web Developers Community</h5>
+                <p class="card-text">
+                  Join a vibrant community of web developers. Share knowledge,
+                  collaborate on projects, and grow together.
+                </p>
+                <a href="communities/webdevelopment.html" class="btn btn-primary">Join Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                src="https://neilpatel.com/wp-content/uploads/2021/09/seo-for-developers.png"
+                class="card-img-top"
+                alt="Community Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">SEO Experts Community</h5>
+                <p class="card-text">
+                  Collaborate with SEO professionals, share strategies, and stay
+                  updated with the latest trends.
+                </p>
+                <a href="#" onclick="sweelalert()" class="btn btn-primary">Join Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                src="data:image/jpeg;base64,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"
+                class="card-img-top"
+                alt="Community Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">UI/UX Designers Community</h5>
+                <p class="card-text">
+                  Join a community of UI/UX designers to share insights, get
+                  feedback, and improve user experience design skills.
+                </p>
+                <a href="#" onclick="sweelalert()"  class="btn btn-primary ">Join Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                src="https://www.seoclerk.com/pics/000/913/570/b46b129b440921d08fbfa7f36e462b83.jpg"
+                class="card-img-top"
+                alt="Community Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Graphic Desginers Community</h5>
+                <p class="card-text">
+                  Connect with creative designers, share ideas, get feedback,
+                  and enhance your skills.
+                </p>
+                <a href="#" onclick="sweelalert()" class="btn btn-primary">Join Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                src="https://aidegreeguide.com/wp-content/uploads/2023/11/ai-engineer.jpg"
+                class="card-img-top"
+                alt="Community Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">AI Engineers Community</h5>
+                <p class="card-text">
+                  Join a community of AI engineers to exchange ideas, share
+                  innovations, and work on cutting-edge AI technologies.
+                </p>
+                <a href="#" onclick="sweelalert()" class="btn btn-primary">Join Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaemd1JU49HT1GPmhFXwgFl9NsrHMbaPLYl9MeIXcCg4CLYEwsCq7LMOSZp-KX2LmT0ys&usqp=CAU"
+                class="card-img-top"
+                alt="Community Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">App Developers</h5>
+                <p class="card-text">
+                  Connect with app developers, exchange knowledge, and
+                  collaborate on innovative projects.
+                </p>
+                <a href="#" onclick="sweelalert()" class="btn btn-primary">Join Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- /community section -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <!-- Section: Social media -->
+        <section class="footer-social">
+          <!-- Left -->
+          <div class="footer-social-left">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <!-- Right -->
+          <div class="footer-social-right">
+            <a href="#" class="social-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3.5l.5-4H13V8a2 2 0 0 1 2-2h3z"/>
+              </svg>
+              
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+              
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8a4 4 0 0 1 3.37 3.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+              
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+              </svg>
+              
+              
+              
+            </a>
+            <a href="#" class="social-icon">
+              <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24">
+                <path fill="#fff" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+              </svg>
+              
+              
+            </a>
+          </div>
+        </section>
+        <!-- Section: Links -->
+        <section class="footer-links">
+          <div class="footer-container">
+            <!-- Grid row -->
+            <div class="footer-row">
+              <!-- Grid column -->
+              <div class="footer-column footer-about">
+                <h6 class="footer-title">
+                Tech Dominion
+                </h6>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
+                  nihil.
+                </p>
+              </div>
+              <!-- Grid column -->
+              <div class="footer-column footer-products">
+                <h6 class="footer-title">Company</h6>
+                <p>
+                  <a class="pointer footer-link" href="aboutus.html">About Us</a>
+                </p>
+                <p>
+                  <a class="pointer footer-link" href="privacy.pdf"
+                    >Privacy & Policy</a
+                  >
+                </p>
+                <p><a class="pointer footer-link" href="faq.html">FAQs</a></p>
+                <p>
+                  <a class="pointer footer-link" href="contact.html">Support</a>
+                </p>
+  
+                <!-- <p><a class="pointer" href="#">Pricing & Refunds</a></p> -->
+              </div>
+              <!-- Grid column -->
+              <div class="footer-column footer-contact">
+                <h6 class="footer-title">Contact</h6>
+                <p> Street 44, Saddar, Karachi</p>
+                <p> info@example.com</p>
+                <p> +92 111 222 333</p>
+                <p> +92 111 222 333</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          © 2021 Copyright:
+          <a href="footer.html" class="footer-link">Tech Dominion.com</a>
+        </div>
+      </footer>
+      <!-- Footer -->
+  </body>
+</html>
+<script src="js/script.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+
+<!-- aos.js  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+<!-- aos.js -->
+
+<!-- jqeury smooth scroll -->
+<!-- <script>
+  $(document).ready(function () {
+    scrollBar();
+    $(window).on("scroll", function () {
+      scrollBar();
+    });
+  });
+
+  //SMOOTH SCROLL
+  $("header a").click(function () {
+    var $href = $(this).attr("href").replace("/", "");
+    var $anchor = $($href).offset();
+
+    if (typeof $anchor !== "undefined") {
+      $("html, body").animate({
+        scrollTop: $anchor.top,
+      });
+      return false;
+    }
+  });
+</script> -->
+
+<script>
+  $(document).ready(function () {
+    // Add smooth scrolling to all links
+    $("a").on("click", function (event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          100000000,
+          "easeInOutExpo",
+          function () {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          }
+        );
+      } // End if
+    });
+  });
+</script>
+<!-- /jqeury smooth scroll -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  function sweelalert(){
+    Swal.fire({
+  icon: "info",
+  title: "Comming soon...",
+  text: "These Communities are still under development",
+ 
+});
+  }
+</script>

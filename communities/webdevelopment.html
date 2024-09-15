@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Dominion - Community Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/communities.css" />
+    
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .sidebar .nav-link {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      .top-nav .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .content {
+        padding: 20px;
+      }
+      .main-content h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .main-content p {
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.6;
+        margin-top: 20px;
+      }
+      .main-content h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .main-content ul {
+        font-size: 1.125rem;
+        font-weight: 400;
+        margin-top: 20px;
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+      .main-content ul li {
+        margin-bottom: 10px;
+      }
+      .main-content strong {
+        font-weight: 500;
+      }
+      .card {
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar" id="sidebar">
+      <nav class="nav flex-column">
+        <a class="nav-link pointer">Dashboard</a>
+        <a class="nav-link pointer navlink active" href="#" data-tab="home"
+          ><i class="fas fa-home pointer"></i> Home</a
+        >
+        <a class="nav-link navlink pointer" href="#" data-tab="products"
+          ><i class="fas fa-box pointer"></i> Products</a
+        >
+        <a class="nav-link navlink pointer" href="#" data-tab="feed"
+          ><i class="fas fa-rss "></i> Feed</a
+        >
+      </nav>
+    </div>
+
+    <div class="top-nav d-flex justify-content-between align-items-center px-3">
+      <div class="navbar-brand pointer menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars  pointer"></i> &nbsp; <span class="pointer"> Web Developers Community</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="main-content">
+        <div id="home" class="tab-content active">
+          <h1 class="mb-2">
+            Welcome to Tech Dominion: The Premier Web Developers Community
+          </h1>
+          <p class="mt-4">
+            At Tech Dominion, we are more than just a community; we are a hub of
+            innovation, collaboration, and continuous learning tailored
+            specifically for web developers in Pakistan. Whether you're just
+            starting out or a seasoned professional, our platform offers a
+            wealth of resources and opportunities to help you grow and excel in
+            your career.
+          </p>
+          <h2 class="mt-4">Why Join Tech Dominion?</h2>
+          <ul class="mt-4">
+            <li>
+              <strong>Comprehensive Courses</strong>: Gain access to a variety
+              of courses covering the latest web development technologies and
+              practices.
+            </li>
+            <li>
+              <strong>Study Materials</strong>: Utilize our extensive library of
+              study materials, guides, and tutorials to reinforce your learning.
+            </li>
+            <li>
+              <strong>Live Lectures</strong>: Participate in live sessions with
+              industry experts, getting real-time insights and feedback.
+            </li>
+            <li>
+              <strong>1-on-1 Sessions</strong>: Benefit from personalized
+              mentoring to tackle your unique challenges and goals.
+            </li>
+            <li>
+              <strong>Exciting Challenges</strong>: Test your skills with
+              regular challenges and competitions designed to push your
+              boundaries and foster innovation.
+            </li>
+            <li>
+              <strong>Industry Updates</strong>: Stay ahead with the latest
+              trends, news, and updates from the world of web development.
+            </li>
+          </ul>
+          <h2 class="mt-3">Our Vision</h2>
+          <p class="mt-3">
+            Tech Dominion aims to be the go-to community for web developers in
+            Pakistan. Our mission is to foster an environment where members can
+            share knowledge, collaborate on projects, and continually advance
+            their skills. We believe in the power of community and are dedicated
+            to supporting each member's journey through:
+          </p>
+          <ul class="mt-3">
+            <li>
+              <strong>Innovation</strong>: Encouraging creative solutions and
+              new ideas.
+            </li>
+            <li>
+              <strong>Collaboration</strong>: Building a network of supportive
+              peers and mentors.
+            </li>
+            <li>
+              <strong>Continuous Learning</strong>: Providing resources for
+              ongoing education and professional development.
+            </li>
+          </ul>
+          <h2 class="mt-3">Get Started</h2>
+          <p class="mt-3">
+            Ready to take your web development journey to the next level? Click
+            the 'Join Now' button to become a member of Tech Dominion and unlock
+            a world of opportunities.
+          </p>
+        </div>
+
+        <div id="products" class="tab-content">
+          <h1>Products</h1>
+          <p>This is the products content area.</p>
+
+          <!-- Cards Section -->
+          <div class="card-deck mt-4">
+            <div class="card" style="background-color: #0063f9 !important;">
+              <div class="card-body">
+                <h5 class="card-title">Courses</h5>
+                <p class="card-text">Explore diverse, career-boosting courses.</p>
+                <button type="button"  class="btn btn-primary pointer" onclick="showCoursesModal()" style="background-color: #031d45 !important;">Explore Courses</button>
+              </div>
+            </div>
+            <div class="card" style="background-color: #0063f9 !important;">
+              <div class="card-body">
+                <h5 class="card-title">Study Material</h5>
+                <p class="card-text">Access high-quality study resources.</p>
+                <button type="button"  class="btn btn-primary pointer" onclick="showMaterialsModal()" style="background-color: #031d45 !important;">Get Materials</button>
+              </div>
+            </div>
+            <div class="card" style="background-color: #0063f9 !important;">
+              <div class="card-body">
+                <h5 class="card-title">Feedback and Online Sessions</h5>
+                <p class="card-text">Join live sessions and get feedback.</p>
+                <button type="button"  class="btn btn-primary pointer" onclick="showSessionsModal()"  style="background-color: #031d45 !important;">Join Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="feed" class="tab-content">
+          <h1>Feed</h1>
+        <img style="width: 400px; height: 400px;" src="../images/Blue Gray Simple We Are Hiring Facebook Post.png" alt="">
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("menu-toggle").addEventListener("click", function () {
+        document.getElementById("sidebar").classList.toggle("active");
+      });
+
+      const navLinks = document.querySelectorAll(".navlink");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetTab = this.getAttribute("data-tab");
+
+          document.querySelectorAll(".tab-content").forEach((tab) => {
+            tab.classList.remove("active");
+          });
+          document.getElementById(targetTab).classList.add("active");
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+
+      function showCoursesModal() {
+        Swal.fire({
+          title: 'Courses',
+          html: `
+            <p>Explore our wide range of courses designed to boost your career. Here are some available courses:</p>
+            <ul style='list-style:none;'>
+              <li><a href="https://drive.google.com/drive/folders/1CY9iffvnmMt4b1y-5ibXakNyHEmid7Nl" target="_blank">PHP fullstack Development Course</a></li>
+              <li><a href="https://drive.google.com/drive/folders/1sZ2EkhP_flKAshqNjjUXC2TaxFejCta1" target="_blank">FrontEnd Development Course</a></li>
+              <li><a href="https://www.udemy.com/course/fullstack-mern-web-development-free-content/" target="_blank">MERN Stack Development Course</a></li>
+            </ul>
+          `,
+          confirmButtonText: 'Close'
+        });
+      }
+
+      function showMaterialsModal() {
+        Swal.fire({
+          title: 'Study Material',
+          html: `
+            <p>Access high-quality study resources. Here are some available materials:</p>
+            <ul>
+              <li><a href="https://drive.google.com/your-material-link1" target="_blank">Material 1</a></li>
+              <li><a href="https://drive.google.com/your-material-link2" target="_blank">Material 2</a></li>
+              <li><a href="https://drive.google.com/your-material-link3" target="_blank">Material 3</a></li>
+            </ul>
+          `,
+          confirmButtonText: 'Close'
+        });
+      }
+
+      function showSessionsModal() {
+        Swal.fire({
+          title: 'Feedback and Online Sessions',
+          html: `
+            <p>Join live sessions and get feedback from industry experts. Here are some available sessions:</p>
+            <ul>
+              <li><a href="https://drive.google.com/your-session-link1" target="_blank">Session 1</a></li>
+              <li><a href="https://drive.google.com/your-session-link2" target="_blank">Session 2</a></li>
+              <li><a href="https://drive.google.com/your-session-link3" target="_blank">Session 3</a></li>
+            </ul>
+          `,
+          confirmButtonText: 'Close'
+        });
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>

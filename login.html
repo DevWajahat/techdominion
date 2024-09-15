@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
+  </head>
+  <body>
+    <div class="form">
+      <h2>Login</h2>
+      <div class="input">
+        <div class="inputBox pointer">
+          <label class="pointer" for="username">Email</label>
+          <input
+            class="pointer"
+            type="text"
+            name="username"
+            id="username"
+            placeholder="example@xyz.com"
+          />
+          <span class="error pointer" id="usernameError"></span>
+        </div>
+
+        <div class="inputBox pointer">
+          <label class="pointer" for="password">Password</label>
+          <input
+            class="pointer"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="•••••••••"
+          />
+          <span class="error pointer" id="passwordError"></span>
+        </div>
+        <div class="inputBox">
+          <input type="submit" name="signin" id="signin" value="Signin" />
+        </div>
+      </div>
+      <p class="forget pointer">Forget Password? <a href="">Click here</a></p>
+      <p class="forget pointer">
+        Didn't have a account <a href="">Register here</a>
+      </p>
+    </div>
+    <script src="js/login.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputs = document.querySelectorAll(".inputBox input");
+        inputs.forEach((input) => {
+          input.addEventListener("focus", function () {
+            this.parentNode.classList.add("focus");
+          });
+          input.addEventListener("blur", function () {
+            if (this.value === "") {
+              this.parentNode.classList.remove("focus");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

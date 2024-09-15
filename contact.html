@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/contact.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
+  </head>
+  <body>
+    <form action="https://formspree.io/f/xdknaplb" method="POST">
+      <div class="form">
+        <h2>Contact Us</h2>
+
+        <p class="forget">
+          If you have any questions or inquiries, please feel free to contact
+          us. We are here to help!
+        </p>
+        <div class="input">
+          <div class="inputBox">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="John Doe" />
+          </div>
+
+          <div class="inputBox">
+            <label for="email">email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@xyz.com"
+            />
+          </div>
+          <div class="inputBox">
+            <label for="message">Message</label>
+            <input type="text" name="message" id="message" placeholder="" />
+          </div>
+          <div class="inputBox">
+            <input type="submit" name="submit" id="submit" value="Send" />
+          </div>
+        </div>
+      </div>
+    </form>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputs = document.querySelectorAll(".inputBox input");
+        inputs.forEach((input) => {
+          input.addEventListener("focus", function () {
+            this.parentNode.classList.add("focus");
+          });
+          input.addEventListener("blur", function () {
+            if (this.value === "") {
+              this.parentNode.classList.remove("focus");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

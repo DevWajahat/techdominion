@@ -1,0 +1,141 @@
+
+/* importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+/* /importing fonts */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+.pointer{
+    cursor: url('../images/pointer.png'),auto;
+  }
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #131419;
+    cursor: url(../images/cursor.png),auto ;
+}
+/* scrollbar */
+::-webkit-scrollbar{
+    scroll-behavior: smooth;
+    scrollbar-width:  12px;
+      width: 5px;
+    background:transparent;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #D62929;
+  }
+  /* /scrollbar */
+
+.form {
+    position: relative;
+    width: 350px;
+    padding: 30px;
+    background: #131419;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+                5px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    animation: zoomInDown;
+    animation-duration: 2s;
+}
+.form h2 {
+    color: #c7c7c7;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: fadeInDown 1s;
+}
+.form .input {
+    text-align: left;
+    margin-top: 40px;
+}
+.form .input .inputBox {
+    margin-top: 35px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.form .input .inputBox label {
+    display: block;
+    color: #868686;
+    margin-bottom: 5px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.form .input .inputBox input {
+    width: 100%;
+    height: 50px;
+    background: #131419;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 18px;
+    color: #03a9f4;
+    box-shadow: inset -2px -2px 6px rgba(255,255,255,0.05),
+                inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.form .input .inputBox:hover {
+    transform: scale(1.05);
+   
+}
+.form .input .inputBox.focus label,
+.form .input .inputBox input:focus ~ label {
+    color: #03a9f4;
+    transform: translateY(-2px);
+}
+.form .input .inputBox input[type="submit"] {
+    margin-top: 20px;
+    box-shadow: -2px -2px 6px rgba(255,255,255,0.05),
+                2px 2px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.form .input .inputBox input[type="submit"]:active {
+    color: #005c9c;
+    box-shadow: inset -2px -2px 6px rgba(255,255,255,0.05),
+                inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.form .input .inputBox input::placeholder {
+    color: #555;
+    font-size: 18px;
+}
+.forget {
+    margin-top: 30px;
+    color: #555;
+}
+.forget a {
+    color: #ff0479;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .form {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Larger screen adjustments */
+@media (min-width: 1200px) {
+    .form {
+        width: 600px;
+        padding: 60px;
+    }
+}
+.error {
+    color: red !important;
+    font-size: 14px;
+}
